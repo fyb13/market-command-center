@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { io } from 'socket.io-client';
 import axios from 'axios';
 import moment from 'moment';
-import PortfolioModule from './components/PortfolioModule';
-import MacroModule from './components/MacroModule';
-import NewsModule from './components/NewsModule';
-import TweetsModule from './components/TweetsModule';
-import RefreshTimer from './components/RefreshTimer';
+import PortfolioModule from './PortfolioModule';
+import MacroModule from './MacroModule';
+import NewsModule from './NewsModule';
+import TweetsModule from './TweetsModule';
+import RefreshTimer from './RefreshTimer';
 
 // Backend URL - change this in production
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
