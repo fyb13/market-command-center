@@ -15,7 +15,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+const [error, setError] = useState<string | null>(null);
   const [nextUpdate, setNextUpdate] = useState<Date | null>(null);
   const [socket, setSocket] = useState<Socket | null>(null);
 
