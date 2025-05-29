@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { io } from 'socket.io-client';
+import { io, Socket } from 'socket.io-client';
 import axios from 'axios';
 import moment from 'moment';
 import PortfolioModule from './PortfolioModule';
@@ -17,7 +17,8 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [nextUpdate, setNextUpdate] = useState(null);
-  const [socket, setSocket] = useState(null);
+  const [socket, setSocket] = useState<Socket | null>(null);
+
 
   // Initialize Socket.IO connection
   useEffect(() => {
