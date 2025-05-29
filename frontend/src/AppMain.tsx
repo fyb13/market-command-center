@@ -16,7 +16,7 @@ function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [nextUpdate, setNextUpdate] = useState(null);
+  const [nextUpdate, setNextUpdate] = useState<Date | null>(null);
   const [socket, setSocket] = useState<Socket | null>(null);
 
 
