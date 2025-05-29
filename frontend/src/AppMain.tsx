@@ -7,13 +7,17 @@ import MacroModule from './MacroModule';
 import NewsModule from './NewsModule';
 import TweetsModule from './TweetsModule';
 import RefreshTimer from './RefreshTimer';
+interface DashboardData {
+timestamp: string;
+nextUpdate?: string;
+}
 
 // Backend URL - change this in production
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
-  const [data, setData] = useState(null);
+const [data, setData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
 const [error, setError] = useState<string | null>(null);
   const [nextUpdate, setNextUpdate] = useState<Date | null>(null);
