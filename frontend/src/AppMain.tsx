@@ -10,6 +10,10 @@ import RefreshTimer from './RefreshTimer';
 interface DashboardData {
 timestamp: string;
 nextUpdate?: string;
+ portfolio?: unknown;
+  macro?: unknown;
+  news?: unknown;
+  tweets?: unknown;
 }
 
 // Backend URL - change this in production
